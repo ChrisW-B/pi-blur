@@ -1,8 +1,11 @@
 [tool.poetry]
-name = "pi-news"
+name = "pi-blur"
 version = "0.1.0"
 description = ""
 authors = ["Chris Barry <chris@greatjones.co>"]
+
+[tool.poetry.scripts]
+start = "pi_blur.__main__:main"
 
 [tool.poetry.dependencies]
 python = "^3.7"

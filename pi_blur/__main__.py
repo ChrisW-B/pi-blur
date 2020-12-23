@@ -46,7 +46,7 @@ def print_story(story):
   print(story)
 
 
-def init():
+def main():
   cookies = get_newsblur_cookies(USER_NAME, PASSWORD)
   feeds = get_newsblur_feed_list(cookies)
   stories = list(map(lambda feed: fetch_recent_story(cookies, feed), feeds))
@@ -54,4 +54,5 @@ def init():
   most_recent = sorted_stories[0]
   print(most_recent.get('headline') + ' ' + most_recent.get('date').strftime('%b %-d, %Y %-I:%M %p'))
 
-init()
+if __name__ == '__main__':
+  main()
