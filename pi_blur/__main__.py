@@ -120,7 +120,9 @@ def main():
     stories = list(map(lambda feed: fetch_recent_story(cookies, feed), feeds))
     most_recent = sorted(stories, key=lambda k: k['date'])[::-1][0]
     draw_headline(most_recent.get('headline'), most_recent.get('favicon'))
-
+    now = datetime.now()
+    current_time = now.strftime("%m/%d/%Y, %H:%M:%S")
+    print("Updated story!", current_time)
 
 if __name__ == '__main__':
     main()
