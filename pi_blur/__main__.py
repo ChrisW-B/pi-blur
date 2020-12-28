@@ -21,7 +21,7 @@ SPACING = 4
 inky_display = InkyPHAT("black")
 inky_display.set_border(inky_display.WHITE)
 font = ImageFont.truetype(
-    "/usr/share/fonts/truetype/darkergrotesque/DarkerGrotesque-Bold.ttf", 20)
+    "/usr/share/fonts/truetype/darkergrotesque/DarkerGrotesque-ExtraBold.ttf", 18)
 
 
 def wrap_text(text, width, font):
