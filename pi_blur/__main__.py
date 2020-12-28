@@ -88,10 +88,12 @@ def main():
   draw = ImageDraw.Draw(img)
   lines = wrap_text(most_recent.get('headline'), inky_display.WIDTH, font)
   y_text = 0
+
   for line in lines:
     width, height = font.getsize(line)
     draw.text((0, y_text), line, inky_display.BLACK, font)
     y_text += height
+
   favicon = Image.open(BytesIO(base64.b64decode(most_recent.get('favicon')))
   img.paste(favicon, (0, y_text))
   inky_display.set_image(img)
